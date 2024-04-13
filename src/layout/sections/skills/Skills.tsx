@@ -1,24 +1,21 @@
 import React from 'react';
 import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
+import {SectionTitle} from "../../../components/SectionTitle";
+import {Skill} from "./Skill";
 
 export const Skills = () => {
     return (
         <StyledSkills>
-            <SectionTitle>
-
-            </SectionTitle>
+            <SectionTitle text='skills'/>
             <FlexWrapper>
-                <img src="" alt=""/>
+                <img src="" alt="image"/>
                 <SkillsList>
-                    <Skill>
-                        <SkillTitle>
-                            Languages
-                        </SkillTitle>
-                        <SkillDescription>
-                            TypeScript Lua Python JavaScript
-                        </SkillDescription>
-                    </Skill>
+                    <Skill title='Languages' description='TypeScript Lua Python JavaScript'/>
+                    <Skill title='Databases' description='SQlite PostgreSQL Mongo'/>
+                    <Skill title='Tools' description='VSCode Neovim Linux Figma XFCE Arch Git Font Awesome'/>
+                    <Skill title='Other' description='HTML CSS EJS SCSS REST Jinja'/>
+                    <Skill title='Frameworks' description='React Vue Disnake Discord.js Flask Express.js'/>
                 </SkillsList>
             </FlexWrapper>
         </StyledSkills>
@@ -27,19 +24,11 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     
 `
-const SectionTitle = styled.h1`
-    
-`
+
 const SkillsList = styled.div`
-    
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 `
-const Skill = styled.div`
-    border: 1px solid #ABB2BF;
-`
-const SkillTitle = styled.h2`
-    
-`
-const SkillDescription = styled.div`
-    border: 1px solid #ABB2BF;
-`
+
 
