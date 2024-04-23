@@ -3,13 +3,16 @@ import {FlexWrapper} from "../../../components/FlexWrapper";
 import styled from "styled-components";
 import {SectionTitle} from "../../../components/SectionTitle";
 import {Skill} from "./Skill";
+import photo from '../../../assets/images/skills_photo.png'
+import photo2x from '../../../assets/images/skills_photo@2x.png'
+import photo3x from '../../../assets/images/skills_photo@3x.png'
 
 export const Skills = () => {
     return (
         <StyledSkills>
             <SectionTitle text='skills'/>
-            <FlexWrapper>
-                <img src="" alt="image"/>
+            <FlexWrapper direction='space-between'>
+                <img src={photo} srcSet={`${photo2x} 2x, ${photo3x} 3x`} alt="image"/>
                 <SkillsList>
                     <Skill title='Languages' description='TypeScript Lua Python JavaScript'/>
                     <Skill title='Databases' description='SQlite PostgreSQL Mongo'/>
@@ -22,7 +25,7 @@ export const Skills = () => {
     );
 };
 const StyledSkills = styled.section`
-    
+
 `
 
 const SkillsList = styled.div`

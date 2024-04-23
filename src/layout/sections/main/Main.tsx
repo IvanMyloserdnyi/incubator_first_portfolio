@@ -12,7 +12,7 @@ export const Main = () => {
                 <TopSection>
                     <div>
                         <MainTitle>
-                            Elias is a <span>web designer</span> and <h1>front-end developer</h1>
+                            Elias is a <span>web designer</span> and <span>front-end developer</span>
                         </MainTitle>
                         <h2>
                             He crafts responsive websites where technologies meet creativity
@@ -46,7 +46,7 @@ const TopSection = styled.div`
     display: flex;
     justify-content: space-between;
 `
-const MainTitle = styled.p`
+const MainTitle = styled.h1`
 
 `
 const BottomSection = styled.dl`

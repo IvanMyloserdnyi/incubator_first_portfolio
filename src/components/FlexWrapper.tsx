@@ -6,6 +6,7 @@ export const FlexWrapper = styled.div<PropsType>`
     justify-content: ${props => props.justify || 'flex-start'};
     align-items: ${props => props.align || 'stretch'};
     flex-wrap: ${props => props.wrap || 'nowrap'};
+    gap: ${props => props.gap || 0}
 `
 
 type PropsType = {
@@ -13,4 +14,5 @@ type PropsType = {
     justify?: string
     align?: string
     wrap?: string
+    gap?: string
 }
